@@ -2,7 +2,7 @@ from PIL import Image
 
 img = Image.open('sunset.jpeg')
 
-def fakeGrayScale(pixelTuple):
+def tint(pixelTuple):
     px = pixelTuple.load()
     for i in range(pixelTuple.width):
         for j in range(pixelTuple.height):
@@ -16,4 +16,4 @@ def fakeGrayScale(pixelTuple):
     pixelTuple.save('blue.jpeg')
 
 
-fakeGrayScale(img)
+tint(img)
